@@ -1,0 +1,107 @@
+
+/* Use for header  */
+.grid-container {
+    display: -moz-inline-grid;
+    gap: 10px;
+    height: 100%;  /* Set the height to 100px */
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+}
+
+.half-grid-container {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    gap: 10px;
+    width: 100%;
+    background-color: lightskyblue;
+  }
+
+/* for left navigation panel */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+  }
+
+.header{
+    grid-column: span 1; /* Makes the header span both columns */
+    background-color: #ecba68;
+    text-align: center;
+}
+
+.lnav{
+    text-align: center;
+    background-color: lemonchiffon;
+    grid-column: span 1; /* Makes the navigation span one column */
+}
+
+.rmain{
+    grid-column: span 1; /* Makes the summary span one column */
+}
+
+.main{
+    background-color: lightskyblue;
+    grid-column: span 2; /* Makes the main content span both columns */
+}
+
+.footer{
+    grid-column: span 2; /* Makes the footer span both columns */
+    background-color: #ecba68;
+}
+
+/* Layout for phones */
+@media (max-width: 600px){
+    td{
+        /* more space between lines */
+        line-height:1.5;
+        padding: 5px;
+    }
+}
+
+/* Layout for tablets */
+@media (min-width: 600px){
+    td{
+        /* medium space between lines */
+        line-height:1;
+        padding: 5px;
+    }
+}
+
+/* Layout for laptops */
+@media (min-width: 992px){
+    td{
+        /* less space between lines */
+        line-height:0.5;
+        padding: 10px;
+    }
+}
+
+.skill:hover{
+    transform: scale(150%,150%);
+    text-align: center;
+    font-weight: bold;
+}
+
+/* .image:hover{
+    
+} */
+
+.imageleft{
+    float: left;
+    width: 25%;
+}
+
+.imagemiddle{
+    float: middle;
+    width: 25%;
+}
+
+.imageright{
+    float: right;
+    width: 25%;
+}
+
+.download:hover{
+    transform: scale(120%,120%);
+    font-weight: bold;
+}
