@@ -7,6 +7,7 @@
     grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
 }
 
+/* for summary and navigation */
 .half-grid-container {
     display: grid;
     grid-template-columns: 50% 1fr;
@@ -18,35 +19,106 @@
 /* for left navigation panel */
 .flex-container {
     display: flex;
-    justify-content: space-between;
+    margin-top: 200000px;
     width: 50%;
     height: 100%;
   }
 
 .header{
+    display: grid;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: min-content;
     grid-column: span 1; /* Makes the header span both columns */
     background-color: #ecba68;
     text-align: center;
+    flex-shrink: 0;
 }
 
+/* navigation bar flexbox */
 .lnav{
+    /* turn on flexbox */
+    display: flex;
+    /* align text */
+    flex-grow: 1;
+    width: max-content;
+    justify-content: baseline;
+    align-items: center;
     text-align: center;
+    flex-direction: column;
     background-color: lemonchiffon;
+    width: 100%;
+    height: 50%;
     grid-column: span 1; /* Makes the navigation span one column */
+    margin-top: 200px;
 }
 
 .rmain{
     grid-column: span 1; /* Makes the summary span one column */
+    margin-top: 200px;
 }
 
+/* main container flexbox */
 .main{
+    /* turn on flexbox */
+    display: flex;
+    /* vertical display */
+    flex-direction: column;
     background-color: lightskyblue;
     grid-column: span 2; /* Makes the main content span both columns */
+    padding: 5px;
+    margin-bottom: 300px;
+}
+
+/* grid layout for skills */
+.skills{
+    /* set display to grid  */
+    display: grid;
+    /* one column for all skills */
+    grid-template-columns: 1fr;
+    /* two rows for all skill groups */
+    grid-template-rows: 1fr 1fr;
+}
+
+/* grid layout for projects */
+.projects{
+    /* set display to grid  */
+    display: grid;
+    /* one column for all projects */
+    grid-template-columns: 1fr;
+    /* three rows for each project groups */
+    grid-template-rows: 3fr;
+}
+
+/* main container sections */
+.main-contents{
+    /* take up as much (or as little) space as possible */
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .footer{
+    /* set display to grid  */
+    display: grid;
+    /* fix the footer position */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: min-content;
     grid-column: span 2; /* Makes the footer span both columns */
     background-color: #ecba68;
+    flex-shrink: 0;
+}
+
+.click-link{
+    color: Black;
+    /* turn on flexbox */
+    display: flex;
+    /* align and style text */
+    flex-grow: 3;
+    align-items: center;
+    font-weight: bold;
 }
 
 /* Layout for phones */
@@ -74,6 +146,13 @@
         line-height:0.5;
         padding: 10px;
     }
+}
+
+/* doesnt work; specialize a skill style */
+.specialskill{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 .skill:hover{
