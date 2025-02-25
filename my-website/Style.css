@@ -28,12 +28,12 @@
     display: grid;
     position: fixed;
     top: 0;
-    width: 100%;
     height: min-content;
     grid-column: span 1; /* Makes the header span both columns */
     background-color: #ecba68;
     text-align: center;
     flex-shrink: 0;
+
 }
 
 /* navigation bar flexbox */
@@ -46,11 +46,9 @@
     justify-content: baseline;
     align-items: center;
     text-align: center;
-    flex-direction: column;
     background-color: lemonchiffon;
     width: 100%;
-    height: 50%;
-    grid-column: span 1; /* Makes the navigation span one column */
+    height: 240px;
     margin-top: 200px;
 }
 
@@ -165,22 +163,46 @@
     
 } */
 
-.imageleft{
-    float: left;
-    width: 25%;
-}
 
-.imagemiddle{
-    float: middle;
-    width: 25%;
-}
-
-.imageright{
-    float: right;
-    width: 25%;
-}
 
 .download:hover{
     transform: scale(120%,120%);
     font-weight: bold;
 }
+/* define bootstrap variables */
+:root {
+    --bg-primary: #ff7e5f; /* Define your primary color */
+    --bg-secondary: #feb47b; /* Define your secondary color */
+  }
+
+  /* gradient color for header and footer */
+.gradient{
+    background: linear-gradient(20deg, yellow, rgb(70, 89, 255));
+}
+
+
+/* roboto font */
+.roboto-custom {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; 
+    font-style: normal;
+    font-variation-settings: "wdth" 200; 
+  }
+
+  /* apply for p classes */
+  .p{
+    /* karla font cutom */
+    .karla-custom{
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings: "wdth" 100; 
+      }
+
+  }
+ 
+
+
+  

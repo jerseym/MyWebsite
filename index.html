@@ -2,14 +2,37 @@
 <html lang="en">
 
 <head>
+    <!-- karla font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!--Link to style sheet-->
     <link rel="stylesheet" href="Style.css">
+    <!-- Link to Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
 </head>
-<body class="grid-container">
+<body class="grid-container karla-custom">
     <!-- Name and Goal -->
-    <div class="header">
-        <h1>Jersey Masselink</h1>
-        <h2>Be creative with a team of people</h2>
+    <div class="header container-fluid gradient roboto-custom">
+        <!-- row one -->
+        <div class="row">
+            <!-- centered column wise -->
+            <div class="col-12">
+                <h1>Jersey Masselink</h1>
+            </div>
+        </div>
+        <!-- row two -->
+        <div class="row">
+            <!-- centered column wise -->
+            <div class="col-12">
+                <h2>Be creative with a team of people</h2>
+            </div>
+        </div>
 
         <!-- Horizontal Rule -->
         <hr/>
@@ -19,28 +42,45 @@
         <!-- flex-box for navigation bar -->
         <div>
             <!-- Left Navigation -->
-            <div class="lnav">
-                <a href="#Summary" class="click-link" >Summary</a>
-                <a href="#Skills" class="click-link">Skills</a>
-                <a href="#Projects" class="click-link">Projects</a>
-                <a href="#EducationandExperience" class="click-link">Education and Experience</a>
-                <a href="#ContactInformation" class="click-link">Contact Information</a>
-                <a href="#DownloadResume" class="click-link">Download Resume</a>
+            <div class="lnav container">
+                <div class="nav-item">
+                    <a href="#Summary" class="btn btn-primary" role="button">Summary</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#Skills" class="btn btn-primary" role="button">Skills</a>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#Skills" class="btn btn-primary" role="button">Skills</a>
+                <div class="nav-item">
+                    <a href="#Projects" class="btn btn-primary" role="button">Projects</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#EducationandExperience" class="btn btn-primary" role="button">Education and Experience</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#ContactInformation" class="btn btn-primary" role="button">Contact Information</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#DownloadResume" class="btn btn-primary" role="button">Download Resume</a>
+                </div>
             </div>
         </div>
         <!-- Summary -->
-        <div id="Summary">
-            <p class="rmain">
-                I am interested in technology. I have a long history of coding from attending camps to working at a summer tech camp for multiple summers. With the IMG program, I have started taking art classes and I have gained an interest in that too. I love to learn and try new things, especially in group settings. I was a part of FIRST Robotics in high school as well. 
-            </p>
+        <div id="Summary" class="container">
+            <div class="row col-6">
+                <p class="rmain">
+                    I am interested in technology. I have a long history of coding from attending camps to working at a summer tech camp for multiple summers. With the IMG program, I have started taking art classes and I have gained an interest in that too. I love to learn and try new things, especially in group settings. I was a part of FIRST Robotics in high school as well. 
+                </p>
+            </div>
         </div>
         <!-- Main Content -->
         <div class="main">
-            <div id="Skills" class="main-contents">
+            <div id="Skills" class="main-contents container card">
                 <div class="skills">
-                    <h3>Skills</h3>
-                        <h4>Programming Languages:</h4>
-                            <ul>
+                    <div class="row col-12">
+                        <h3>Skills</h3>
+                        <h4 class="card-title">Programming Languages:</h4>
+                            <ul class="card-text">
                                 <div class="specialskill">
                                     <li class="skill">
                                         Python
@@ -59,8 +99,10 @@
                                     CSS
                                 </li>
                             </ul>
-                        <h4>Game Engines:</h4>
-                            <ul>
+                    </div>
+                    <div class="row col-12">
+                        <h4 class="card-title">Game Engines:</h4>
+                            <ul class="card-text">
                                 <li class="skill">
                                     Twine
                                 </li>
@@ -71,14 +113,18 @@
                                     Unreal Engine
                                 </li>
                             </ul>
-                        <h4>Modeling Software:</h4>
-                            <ul>
+                    </div>
+                    <div class="row col-12">
+                        <h4 class="card-title">Modeling Software:</h4>
+                            <ul class="card-text">
                                 <li class="skill">
                                     Sketchup
                                 </li>
                             </ul>
-                        <h4>I am Currently Learning:</h4>
-                            <ul>
+                    </div>
+                    <div class="row col-12">
+                        <h4 class="card-title">I am Currently Learning:</h4>
+                            <ul class="card-text">
                                 <li class="skill">
                                     C
                                 </li>
@@ -86,80 +132,94 @@
                                     Blender
                                 </li>
                             </ul>
+                    </div>
                 </div>
             </div>
             <div id="Projects" class="main-contents">
-                <div class="projects">
+                <div class="projects card">
                     <h3>Projects</h3>
-                    <h4>A Fantastical Dutch Night</h4>
+                    <div class="row col-12">
+                        <h4 class="card-title">A Fantastical Dutch Night</h4>
 
-                    <!-- Show full drawing image -->
-                    <img src="./media/eot.jpg" alt="Dragon eyes over a tulip field" width="50%" class="imageleft"/>
+                        <!-- Show full drawing image -->
+                        <img src="./media/eot.jpg" alt="Dragon eyes over a tulip field" width="50%" class="card-img-top"/>
+                        <p class="card-text">
+                            Material: Charcoal
+                        </p>
+                    </div>
 
-                    <p>
-                        Material: Charcoal
-                    </p>
+                    <div class="row col-12">
+                        <!-- Show close up of windmill -->
+                        <img src="./media/eot_wm.jpg" alt="Windmill closeup" width="50%" class="card-img-top" />
 
-                    <!-- Show close up of windmill -->
-                    <img src="./media/eot_wm.jpg" alt="Windmill closeup" width="50%" class="imageright" />
+                        <p class="card-text">
+                            Made for ART 151
+                        </p>
 
-                    <p>
-                        Made for ART 151
-                    </p>
+                        
+                    </div>
+                    <div class="row col-12">
+                        <h4 class="card-title">Nintendo Through the Years</h4>
+                        <!-- Show image head on -->
+                        <img src="./media/ntty.jpg" alt="Incomplete Nintendo timeline" width="50%" class="card-img-top" />
 
-                    <h4>Nintendo Through the Years</h4>
+                        <p class="card-text">
+                            Material: Wood, Paint, Cardboard, Wire  
+                        </p>
+                    </div>
 
-                    <!-- Show image head on -->
-                    <img src="./media/ntty.jpg" alt="Incomplete Nintendo timeline" width="50%" class="imageleft" />
+                    <div class="row col-12">
+                        <!-- Show image angled -->
+                        <img src="./media/ntty2.jpg" alt="Incomplete Nintendo timeline amgled" width="50%" class="card-img-top"/>
 
-                    <p>
-                        Material: Wood, Paint, Cardboard, Wire  
-                    </p>
+                        <p class="card-text"> 
+                            Made for ART 151 
+                        </p>
+                    </div>
 
-                    <!-- Show image angled -->
-                    <img src="./media/ntty2.jpg" alt="Incomplete Nintendo timeline amgled" width="50%" class="imageright"/>
+                    <div class="row col-12">
+                        <!-- Show image of beam gun -->
+                        <img src="./media/nttybg.jpg" alt="Beam gun depiction" width="50%" class="card-img-top" />
 
-                    <p> 
-                        Made for ART 151 
-                    </p>
+                        <p class="card-text"> 
+                            Beam gun: one of seven events that didn't make it on the time line
+                        </p>
+                    </div>
+                    <div class="row col-12 card-title">
+                        <h4 class="card-title">N011925</h4>
 
-                    <!-- Show image of beam gun -->
-                    <img src="./media/nttybg.jpg" alt="Beam gun depiction" width="50%" class="imageleft" />
+                        <!-- Show image of robot full -->
+                        <img src="./media/N011925.png" alt="Beam gun depiction" width="50%" class="card-img-top" />
 
-                    <p> 
-                        Beam gun: one of seven events that didn't make it on the time line
-                    </p>
+                        <p class="card-text">
+                            Material: Blender Program  
+                        </p>
+                    </div>
 
-                    <h4>N011925</h4>
+                    <div class="row col-12">
+                        <!-- Show image of close up of robot -->
+                        <img src="./media/N011925Zoom.jpg" alt="Beam gun depiction" width="50%" class="card-img-top" />
 
-                    <!-- Show image of robot full -->
-                    <img src="./media/N011925.png" alt="Beam gun depiction" width="50%" class="imagemiddle" />
-
-                    <p>
-                        Material: Blender Program  
-                    </p>
-
-                    <!-- Show image of close up of robot -->
-                    <img src="./media/N011925Zoom.jpg" alt="Beam gun depiction" width="50%" class="imageright" />
-
-                    <p>
-                        Made for ART 274
-                    </p>
+                        <p class="card-text">
+                            Made for ART 274
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div id="EducationandExperience" class="main-contents">
-                <h3>Education and Experience</h3>
+            <div id="EducationandExperience" class="main-contents container">
+            <h3>Education and Experience</h3>
+            <div class="row col-12">
                 <p>
-                    <table>
+                    <table class="table">
                         <thead>
                             <tr>
-                                <th>
+                                <th scope="col">
                                     Institution
                                 </th>
-                                <th>
+                                <th scope="col">
                                     Degree/Position
                                 </th>
-                                <th>
+                                <th scope="col">
                                     Duration
                                 </th>
                             </tr>
@@ -167,7 +227,7 @@
                         <tbody>
                             <!--Row for high school graduate-->
                             <tr>
-                                <td>
+                                <td scope="row">
                                     Zeeland West High School
                                 </td>
                                 <td>
@@ -180,7 +240,7 @@
                             
                             <!--Row for working on Spanish Major-->
                             <tr>
-                                <td>
+                                <td scope="row">
                                     NAU
                                 </td>
                                 <td>
@@ -193,7 +253,7 @@
                             
                             <!--Row for working on IMG Major-->
                             <tr>
-                                <td>
+                                <td scope="row">
                                     NAU
                                 </td>
                                 <td>
@@ -206,7 +266,7 @@
 
                             <!--Row for working at Camp Infinity-->
                             <tr>
-                                <td>
+                                <td scope="row">
                                     Camp Infinity
                                 </td>
                                 <td>
@@ -221,7 +281,7 @@
 
                             <!--Row for working at Gen Cyber Camp-->
                             <tr>
-                                <td>
+                                <td scope="row">
                                     Gen Cyber camp
                                 </td>
                                 <td>
@@ -234,7 +294,7 @@
 
                             <!--Row for FIRST Robotics-->
                             <tr>
-                                <td>
+                                <td scope="row">
                                     FIRST Robotics Competition
                                 </td>
                                 <td>
@@ -252,41 +312,43 @@
     </div>
 </body>
 <!-- End Content -->
-<footer class="footer">
+<footer class="footer gradient">
     <!-- Contact Info -->
-    <div id="ContactInformation">
-        <h3>Contact Information</h3>
-        <p>
-            Personal Email:
-            <a href="mailto:Jerseymasselink@gmail.com ">
-                Jerseymasselink@gmail.com  
-            </a><br/>
+    <div id="ContactInformation" class="container">
+        <div class="row col-12">
+            <h3>Contact Information</h3>
+            <p>
+                Personal Email:
+                <a href="mailto:Jerseymasselink@gmail.com ">
+                    Jerseymasselink@gmail.com  
+                </a><br/>
 
-            School Email: 
-            <a href="mailto:Jem843@NAU.edu">
-                Jem843@NAU.edu
-            </a><br/>
-            
-            GitHub:
-            <a href="https://github.com/jerseym">
-                Jerseym 
-            </a><br/>
+                School Email: 
+                <a href="mailto:Jem843@NAU.edu">
+                    Jem843@NAU.edu
+                </a><br/>
+                
+                GitHub:
+                <a href="https://github.com/jerseym">
+                    Jerseym 
+                </a><br/>
 
-            LinkedIn:
-            <a href="www.linkedin.com/in/jersey-m-18a514307">
-                Jersey M 
-            </a><br/> 
-        </p>
+                LinkedIn:
+                <a href="www.linkedin.com/in/jersey-m-18a514307">
+                    Jersey M 
+                </a><br/> 
+            </p>
+        </div>
     </div>
     
     <!-- Section to download resume -->
-    <div id="DownloadResume">
-        <h3>Download Resume</h3>
-        <p>
-            <a  class="download" href="/media/resume.pdf" download>
-                Click here
-            </a>
-            to download a copy of my resume
-        </p>
+    <div id="DownloadResume" class="container">
+        <div class="row col-12">
+            <h3>Download Resume</h3>
+            <p>
+                <a class="btn btn-primary" href="/media/resume.pdf" role="button">Click here</a>
+                to download a copy of my resume
+            </p>
+        </div>
     </div>
 </footer>
